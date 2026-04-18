@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f5a36412-06b9-41dd-89e6-e86ec48ec2f8}</ProjectGuid>
+    <RootNamespace>PVZ</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="event.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="tools.cpp" />
+    <ClCompile Include="vector2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="tools.h" />
+    <ClInclude Include="vector2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bar5.png" />
+    <Image Include="res\bullets\PeaNormalExplode\PeaNormalExplode_0.png" />
+    <Image Include="res\bullets\PeaNormal\PeaNormal_0.png" />
+    <Image Include="res\bullets\PeaNormal\PeaNormal_1.png" />
+    <Image Include="res\bullet_blast.png" />
+    <Image Include="res\bullet_normal.png" />
+    <Image Include="res\Cards\card10.png" />
+    <Image Include="res\Cards\card_1.png" />
+    <Image Include="res\Cards\card_2.png" />
+    <Image Include="res\Cards\card_3.png" />
+    <Image Include="res\Cards\card_4.png" />
+    <Image Include="res\Cards\card_5.png" />
+    <Image Include="res\Cards\card_6.png" />
+    <Image Include="res\Cards\card_7.png" />
+    <Image Include="res\Cards\card_hypnoshroom.png" />
+    <Image Include="res\Cards\card_iceshroom.png" />
+    <Image Include="res\Cards\card_jalapeno.png" />
+    <Image Include="res\Cards\card_puffshroom.png" />
+    <Image Include="res\Cards\card_scaredyshroom.png" />
+    <Image Include="res\Cards\card_spikeweed.png" />
+    <Image Include="res\Cards\card_squash.png" />
+    <Image Include="res\Cards\card_sunshroom.png" />
+    <Image Include="res\Cards\card_threepeashooter.png" />
+    <Image Include="res\fail.png" />
+    <Image Include="res\fail2.png" />
+    <Image Include="res\map0.jpg" />
+    <Image Include="res\map1.jpg" />
+    <Image Include="res\menu.png" />
+    <Image Include="res\menu1.png" />
+    <Image Include="res\menu2.png" />
+    <Image Include="res\menu_quit1.png" />
+    <Image Include="res\menu_quit2.png" />
+    <Image Include="res\pause.png" />
+    <Image Include="res\pauseMenu.png" />
+    <Image Include="res\plants.png" />
+    <Image Include="res\Plants\0\1.png" />
+    <Image Include="res\Plants\0\10.png" />
+    <Image Include="res\Plants\0\11.png" />
+    <Image Include="res\Plants\0\12.png" />
+    <Image Include="res\Plants\0\13.png" />
+    <Image Include="res\Plants\0\2.png" />
+    <Image Include="res\Plants\0\3.png" />
+    <Image Include="res\Plants\0\4.png" />
+    <Image Include="res\Plants\0\5.png" />
+    <Image Include="res\Plants\0\6.png" />
+    <Image Include="res\Plants\0\7.png" />
+    <Image Include="res\Plants\0\8.png" />
+    <Image Include="res\Plants\0\9.png" />
+    <Image Include="res\Plants\1\1.png" />
+    <Image Include="res\Plants\1\10.png" />
+    <Image Include="res\Plants\1\11.png" />
+    <Image Include="res\Plants\1\12.png" />
+    <Image Include="res\Plants\1\13.png" />
+    <Image Include="res\Plants\1\14.png" />
+    <Image Include="res\Plants\1\15.png" />
+    <Image Include="res\Plants\1\16.png" />
+    <Image Include="res\Plants\1\17.png" />
+    <Image Include="res\Plants\1\18.png" />
+    <Image Include="res\Plants\1\2.png" />
+    <Image Include="res\Plants\1\3.png" />
+    <Image Include="res\Plants\1\4.png" />
+    <Image Include="res\Plants\1\5.png" />
+    <Image Include="res\Plants\1\6.png" />
+    <Image Include="res\Plants\1\7.png" />
+    <Image Include="res\Plants\1\8.png" />
+    <Image Include="res\Plants\1\9.png" />
+    <Image Include="res\Plants\2\1.png" />
+    <Image Include="res\Plants\2\10.png" />
+    <Image Include="res\Plants\2\11.png" />
+    <Image Include="res\Plants\2\12.png" />
+    <Image Include="res\Plants\2\13.png" />
+    <Image Include="res\Plants\2\14.png" />
+    <Image Include="res\Plants\2\15.png" />
+    <Image Include="res\Plants\2\16.png" />
+    <Image Include="res\Plants\2\2.png" />
+    <Image Include="res\Plants\2\3.png" />
+    <Image Include="res\Plants\2\4.png" />
+    <Image Include="res\Plants\2\5.png" />
+    <Image Include="res\Plants\2\6.png" />
+    <Image Include="res\Plants\2\7.png" />
+    <Image Include="res\Plants\2\8.png" />
+    <Image Include="res\Plants\2\9.png" />
+    <Image Include="res\Plants\3\1.png" />
+    <Image Include="res\Plants\4\1.png" />
+    <Image Include="res\Plants\4\10.png" />
+    <Image Include="res\Plants\4\11.png" />
+    <Image Include="res\Plants\4\12.png" />
+    <Image Include="res\Plants\4\13.png" />
+    <Image Include="res\Plants\4\14.png" />
+    <Image Include="res\Plants\4\15.png" />
+    <Image Include="res\Plants\4\2.png" />
+    <Image Include="res\Plants\4\3.png" />
+    <Image Include="res\Plants\4\4.png" />
+    <Image Include="res\Plants\4\5.png" />
+    <Image Include="res\Plants\4\6.png" />
+    <Image Include="res\Plants\4\7.png" />
+    <Image Include="res\Plants\4\8.png" />
+    <Image Include="res\Plants\4\9.png" />
+    <Image Include="res\Plants\5\1.png" />
+    <Image Include="res\Plants\5\10.png" />
+    <Image Include="res\Plants\5\11.png" />
+    <Image Include="res\Plants\5\12.png" />
+    <Image Include="res\Plants\5\13.png" />
+    <Image Include="res\Plants\5\14.png" />
+    <Image Include="res\Plants\5\15.png" />
+    <Image Include="res\Plants\5\2.png" />
+    <Image Include="res\Plants\5\3.png" />
+    <Image Include="res\Plants\5\4.png" />
+    <Image Include="res\Plants\5\5.png" />
+    <Image Include="res\Plants\5\6.png" />
+    <Image Include="res\Plants\5\7.png" />
+    <Image Include="res\Plants\5\8.png" />
+    <Image Include="res\Plants\5\9.png" />
+    <Image Include="res\Plants\6\1.png" />
+    <Image Include="res\Plants\6\10.png" />
+    <Image Include="res\Plants\6\11.png" />
+    <Image Include="res\Plants\6\12.png" />
+    <Image Include="res\Plants\6\13.png" />
+    <Image Include="res\Plants\6\2.png" />
+    <Image Include="res\Plants\6\3.png" />
+    <Image Include="res\Plants\6\4.png" />
+    <Image Include="res\Plants\6\5.png" />
+    <Image Include="res\Plants\6\6.png" />
+    <Image Include="res\Plants\6\7.png" />
+    <Image Include="res\Plants\6\8.png" />
+    <Image Include="res\Plants\6\9.png" />
+    <Image Include="res\ready.png" />
+    <Image Include="res\set.png" />
+    <Image Include="res\shovel.png" />
+    <Image Include="res\shovelSlot.png" />
+    <Image Include="res\sunshine\1.png" />
+    <Image Include="res\sunshine\10.png" />
+    <Image Include="res\sunshine\11.png" />
+    <Image Include="res\sunshine\12.png" />
+    <Image Include="res\sunshine\13.png" />
+    <Image Include="res\sunshine\14.png" />
+    <Image Include="res\sunshine\15.png" />
+    <Image Include="res\sunshine\16.png" />
+    <Image Include="res\sunshine\17.png" />
+    <Image Include="res\sunshine\18.png" />
+    <Image Include="res\sunshine\19.png" />
+    <Image Include="res\sunshine\2.png" />
+    <Image Include="res\sunshine\20.png" />
+    <Image Include="res\sunshine\21.png" />
+    <Image Include="res\sunshine\22.png" />
+    <Image Include="res\sunshine\23.png" />
+    <Image Include="res\sunshine\24.png" />
+    <Image Include="res\sunshine\25.png" />
+    <Image Include="res\sunshine\26.png" />
+    <Image Include="res\sunshine\27.png" />
+    <Image Include="res\sunshine\28.png" />
+    <Image Include="res\sunshine\29.png" />
+    <Image Include="res\sunshine\3.png" />
+    <Image Include="res\sunshine\4.png" />
+    <Image Include="res\sunshine\5.png" />
+    <Image Include="res\sunshine\6.png" />
+    <Image Include="res\sunshine\7.png" />
+    <Image Include="res\sunshine\8.png" />
+    <Image Include="res\sunshine\9.png" />
+    <Image Include="res\win.png" />
+    <Image Include="res\win2.png" />
+    <Image Include="res\zm\0\1.png" />
+    <Image Include="res\zm\0\10.png" />
+    <Image Include="res\zm\0\11.png" />
+    <Image Include="res\zm\0\12.png" />
+    <Image Include="res\zm\0\13.png" />
+    <Image Include="res\zm\0\14.png" />
+    <Image Include="res\zm\0\15.png" />
+    <Image Include="res\zm\0\16.png" />
+    <Image Include="res\zm\0\17.png" />
+    <Image Include="res\zm\0\18.png" />
+    <Image Include="res\zm\0\19.png" />
+    <Image Include="res\zm\0\2.png" />
+    <Image Include="res\zm\0\20.png" />
+    <Image Include="res\zm\0\21.png" />
+    <Image Include="res\zm\0\22.png" />
+    <Image Include="res\zm\0\3.png" />
+    <Image Include="res\zm\0\4.png" />
+    <Image Include="res\zm\0\5.png" />
+    <Image Include="res\zm\0\6.png" />
+    <Image Include="res\zm\0\7.png" />
+    <Image Include="res\zm\0\8.png" />
+    <Image Include="res\zm\0\9.png" />
+    <Image Include="res\zm\1\1.png" />
+    <Image Include="res\zm\1\10.png" />
+    <Image Include="res\zm\1\11.png" />
+    <Image Include="res\zm\1\12.png" />
+    <Image Include="res\zm\1\13.png" />
+    <Image Include="res\zm\1\14.png" />
+    <Image Include="res\zm\1\15.png" />
+    <Image Include="res\zm\1\16.png" />
+    <Image Include="res\zm\1\17.png" />
+    <Image Include="res\zm\1\18.png" />
+    <Image Include="res\zm\1\19.png" />
+    <Image Include="res\zm\1\2.png" />
+    <Image Include="res\zm\1\20.png" />
+    <Image Include="res\zm\1\21.png" />
+    <Image Include="res\zm\1\3.png" />
+    <Image Include="res\zm\1\4.png" />
+    <Image Include="res\zm\1\5.png" />
+    <Image Include="res\zm\1\6.png" />
+    <Image Include="res\zm\1\7.png" />
+    <Image Include="res\zm\1\8.png" />
+    <Image Include="res\zm\1\9.png" />
+    <Image Include="res\zm\2\1.png" />
+    <Image Include="res\zm\2\10.png" />
+    <Image Include="res\zm\2\11.png" />
+    <Image Include="res\zm\2\12.png" />
+    <Image Include="res\zm\2\13.png" />
+    <Image Include="res\zm\2\14.png" />
+    <Image Include="res\zm\2\15.png" />
+    <Image Include="res\zm\2\2.png" />
+    <Image Include="res\zm\2\3.png" />
+    <Image Include="res\zm\2\4.png" />
+    <Image Include="res\zm\2\5.png" />
+    <Image Include="res\zm\2\6.png" />
+    <Image Include="res\zm\2\7.png" />
+    <Image Include="res\zm\2\8.png" />
+    <Image Include="res\zm\2\9.png" />
+    <Image Include="res\zm\3\1.png" />
+    <Image Include="res\zm\3\10.png" />
+    <Image Include="res\zm\3\11.png" />
+    <Image Include="res\zm\3\12.png" />
+    <Image Include="res\zm\3\2.png" />
+    <Image Include="res\zm\3\3.png" />
+    <Image Include="res\zm\3\4.png" />
+    <Image Include="res\zm\3\5.png" />
+    <Image Include="res\zm\3\6.png" />
+    <Image Include="res\zm\3\7.png" />
+    <Image Include="res\zm\3\8.png" />
+    <Image Include="res\zm\3\9.png" />
+    <Image Include="res\zm\4\1.png" />
+    <Image Include="res\zm\4\10.png" />
+    <Image Include="res\zm\4\11.png" />
+    <Image Include="res\zm\4\2.png" />
+    <Image Include="res\zm\4\3.png" />
+    <Image Include="res\zm\4\4.png" />
+    <Image Include="res\zm\4\5.png" />
+    <Image Include="res\zm\4\6.png" />
+    <Image Include="res\zm\4\7.png" />
+    <Image Include="res\zm\4\8.png" />
+    <Image Include="res\zm\4\9.png" />
+    <Image Include="res\zm\5\1.png" />
+    <Image Include="res\zm\5\10.png" />
+    <Image Include="res\zm\5\11.png" />
+    <Image Include="res\zm\5\12.png" />
+    <Image Include="res\zm\5\13.png" />
+    <Image Include="res\zm\5\14.png" />
+    <Image Include="res\zm\5\15.png" />
+    <Image Include="res\zm\5\16.png" />
+    <Image Include="res\zm\5\17.png" />
+    <Image Include="res\zm\5\18.png" />
+    <Image Include="res\zm\5\19.png" />
+    <Image Include="res\zm\5\2.png" />
+    <Image Include="res\zm\5\20.png" />
+    <Image Include="res\zm\5\21.png" />
+    <Image Include="res\zm\5\22.png" />
+    <Image Include="res\zm\5\23.png" />
+    <Image Include="res\zm\5\3.png" />
+    <Image Include="res\zm\5\4.png" />
+    <Image Include="res\zm\5\5.png" />
+    <Image Include="res\zm\5\6.png" />
+    <Image Include="res\zm\5\7.png" />
+    <Image Include="res\zm\5\8.png" />
+    <Image Include="res\zm\5\9.png" />
+    <Image Include="res\zm_dead\ZombieDust\1.png" />
+    <Image Include="res\zm_dead\ZombieDust\10.png" />
+    <Image Include="res\zm_dead\ZombieDust\11.png" />
+    <Image Include="res\zm_dead\ZombieDust\12.png" />
+    <Image Include="res\zm_dead\ZombieDust\13.png" />
+    <Image Include="res\zm_dead\ZombieDust\14.png" />
+    <Image Include="res\zm_dead\ZombieDust\15.png" />
+    <Image Include="res\zm_dead\ZombieDust\16.png" />
+    <Image Include="res\zm_dead\ZombieDust\17.png" />
+    <Image Include="res\zm_dead\ZombieDust\18.png" />
+    <Image Include="res\zm_dead\ZombieDust\19.png" />
+    <Image Include="res\zm_dead\ZombieDust\2.png" />
+    <Image Include="res\zm_dead\ZombieDust\20.png" />
+    <Image Include="res\zm_dead\ZombieDust\3.png" />
+    <Image Include="res\zm_dead\ZombieDust\4.png" />
+    <Image Include="res\zm_dead\ZombieDust\5.png" />
+    <Image Include="res\zm_dead\ZombieDust\6.png" />
+    <Image Include="res\zm_dead\ZombieDust\7.png" />
+    <Image Include="res\zm_dead\ZombieDust\8.png" />
+    <Image Include="res\zm_dead\ZombieDust\9.png" />
+    <Image Include="res\zm_eat\0\1.png" />
+    <Image Include="res\zm_eat\0\10.png" />
+    <Image Include="res\zm_eat\0\11.png" />
+    <Image Include="res\zm_eat\0\12.png" />
+    <Image Include="res\zm_eat\0\13.png" />
+    <Image Include="res\zm_eat\0\14.png" />
+    <Image Include="res\zm_eat\0\15.png" />
+    <Image Include="res\zm_eat\0\16.png" />
+    <Image Include="res\zm_eat\0\17.png" />
+    <Image Include="res\zm_eat\0\18.png" />
+    <Image Include="res\zm_eat\0\19.png" />
+    <Image Include="res\zm_eat\0\2.png" />
+    <Image Include="res\zm_eat\0\20.png" />
+    <Image Include="res\zm_eat\0\21.png" />
+    <Image Include="res\zm_eat\0\3.png" />
+    <Image Include="res\zm_eat\0\4.png" />
+    <Image Include="res\zm_eat\0\5.png" />
+    <Image Include="res\zm_eat\0\6.png" />
+    <Image Include="res\zm_eat\0\7.png" />
+    <Image Include="res\zm_eat\0\8.png" />
+    <Image Include="res\zm_eat\0\9.png" />
+    <Image Include="res\zm_eat\1\1.png" />
+    <Image Include="res\zm_eat\1\10.png" />
+    <Image Include="res\zm_eat\1\11.png" />
+    <Image Include="res\zm_eat\1\2.png" />
+    <Image Include="res\zm_eat\1\3.png" />
+    <Image Include="res\zm_eat\1\4.png" />
+    <Image Include="res\zm_eat\1\5.png" />
+    <Image Include="res\zm_eat\1\6.png" />
+    <Image Include="res\zm_eat\1\7.png" />
+    <Image Include="res\zm_eat\1\8.png" />
+    <Image Include="res\zm_eat\1\9.png" />
+    <Image Include="res\zm_eat\2\1.png" />
+    <Image Include="res\zm_eat\2\10.png" />
+    <Image Include="res\zm_eat\2\11.png" />
+    <Image Include="res\zm_eat\2\2.png" />
+    <Image Include="res\zm_eat\2\3.png" />
+    <Image Include="res\zm_eat\2\4.png" />
+    <Image Include="res\zm_eat\2\5.png" />
+    <Image Include="res\zm_eat\2\6.png" />
+    <Image Include="res\zm_eat\2\7.png" />
+    <Image Include="res\zm_eat\2\8.png" />
+    <Image Include="res\zm_eat\2\9.png" />
+    <Image Include="res\zm_eat\3\1.png" />
+    <Image Include="res\zm_eat\3\2.png" />
+    <Image Include="res\zm_eat\3\3.png" />
+    <Image Include="res\zm_eat\3\4.png" />
+    <Image Include="res\zm_eat\3\5.png" />
+    <Image Include="res\zm_eat\3\6.png" />
+    <Image Include="res\zm_eat\3\7.png" />
+    <Image Include="res\zm_eat\4\1.png" />
+    <Image Include="res\zm_eat\4\10.png" />
+    <Image Include="res\zm_eat\4\2.png" />
+    <Image Include="res\zm_eat\4\3.png" />
+    <Image Include="res\zm_eat\4\4.png" />
+    <Image Include="res\zm_eat\4\5.png" />
+    <Image Include="res\zm_eat\4\6.png" />
+    <Image Include="res\zm_eat\4\7.png" />
+    <Image Include="res\zm_eat\4\8.png" />
+    <Image Include="res\zm_eat\4\9.png" />
+    <Image Include="res\zm_eat\5\1.png" />
+    <Image Include="res\zm_eat\5\10.png" />
+    <Image Include="res\zm_eat\5\11.png" />
+    <Image Include="res\zm_eat\5\12.png" />
+    <Image Include="res\zm_eat\5\2.png" />
+    <Image Include="res\zm_eat\5\3.png" />
+    <Image Include="res\zm_eat\5\4.png" />
+    <Image Include="res\zm_eat\5\5.png" />
+    <Image Include="res\zm_eat\5\6.png" />
+    <Image Include="res\zm_eat\5\7.png" />
+    <Image Include="res\zm_eat\5\8.png" />
+    <Image Include="res\zm_eat\5\9.png" />
+    <Image Include="res\zm_stand\0\1.png" />
+    <Image Include="res\zm_stand\0\10.png" />
+    <Image Include="res\zm_stand\0\11.png" />
+    <Image Include="res\zm_stand\0\2.png" />
+    <Image Include="res\zm_stand\0\3.png" />
+    <Image Include="res\zm_stand\0\4.png" />
+    <Image Include="res\zm_stand\0\5.png" />
+    <Image Include="res\zm_stand\0\6.png" />
+    <Image Include="res\zm_stand\0\7.png" />
+    <Image Include="res\zm_stand\0\8.png" />
+    <Image Include="res\zm_stand\0\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\audio\bg.MP3" />
+    <Media Include="res\audio\buttonclick.mp3" />
+    <Media Include="res\audio\cannotselect.wav" />
+    <Media Include="res\audio\evillaugh.mp3" />
+    <Media Include="res\audio\grasswalk.mp3" />
+    <Media Include="res\audio\gravebutton.mp3" />
+    <Media Include="res\audio\lose.mp3" />
+    <Media Include="res\audio\losemusic.mp3" />
+    <Media Include="res\audio\pause.mp3" />
+    <Media Include="res\audio\peacrush1.mp3" />
+    <Media Include="res\audio\peacrush1.wav" />
+    <Media Include="res\audio\peacrush2.mp3" />
+    <Media Include="res\audio\peacrush2.wav" />
+    <Media Include="res\audio\peacrush3.mp3" />
+    <Media Include="res\audio\peacrush3.wav" />
+    <Media Include="res\audio\peaToBucket1.wav" />
+    <Media Include="res\audio\peaToBucket2.wav" />
+    <Media Include="res\audio\peaToRoadCone1.wav" />
+    <Media Include="res\audio\peaToRoadCone2.wav" />
+    <Media Include="res\audio\plantDead.mp3" />
+    <Media Include="res\audio\plantDead.wav" />
+    <Media Include="res\audio\plantdown.mp3" />
+    <Media Include="res\audio\plantdown.wav" />
+    <Media Include="res\audio\potato_mine.mp3" />
+    <Media Include="res\audio\readysetplant.mp3" />
+    <Media Include="res\audio\select.mp3" />
+    <Media Include="res\audio\select.wav" />
+    <Media Include="res\audio\selectCancel.mp3" />
+    <Media Include="res\audio\shootpea1.mp3" />
+    <Media Include="res\audio\shootpea1.wav" />
+    <Media Include="res\audio\shootpea2.mp3" />
+    <Media Include="res\audio\shootpea2.wav" />
+    <Media Include="res\audio\shovel.mp3" />
+    <Media Include="res\audio\sunshine.mp3" />
+    <Media Include="res\audio\sunshine.wav" />
+    <Media Include="res\audio\win.mp3" />
+    <Media Include="res\audio\zmeat.mp3" />
+    <Media Include="res\audio\zmeat.wav" />
+    <Media Include="res\audio\zmeat2.mp3" />
+    <Media Include="res\audio\zmeat2.wav" />
+    <Media Include="res\audio\zombiescoming.mp3" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
